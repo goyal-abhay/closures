@@ -1,7 +1,3 @@
 const counterFactory = require('../counterFactory.cjs')
 const result = counterFactory()
-const result1 = counterFactory()
 console.log(result)
-console.log(result.increment())
-console.log(result.increment())
-console.log(result1.increment())
