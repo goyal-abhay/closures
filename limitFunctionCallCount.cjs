@@ -1,4 +1,7 @@
 let limitFunctionCallCount = (cb,n) => {
+    if (cb === undefined || n === undefined){
+        throw new Error('Invalid arguements')
+    }
     let returnCB = () => {
         if (n>0){
             n--;
@@ -6,7 +9,7 @@ let limitFunctionCallCount = (cb,n) => {
         }
         else return null
     }
-    return returnCB()
+    return returnCB;
 }
 
 module.exports = limitFunctionCallCount;

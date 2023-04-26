@@ -4,7 +4,7 @@ let cacheFunction = (cb) => {
         throw new Error('Invalid cb function')
     }
     return function(...args){
-        const arrStr = JSON.stringify(...args)
+        const arrStr = JSON.stringify(args)
         if (cache.hasOwnProperty(arrStr)){
             return cache[arrStr]
         }
